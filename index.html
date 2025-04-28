@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Crypto Receipt</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="receipt">
+    <div class="logo">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/5/57/Binance_Logo.png" alt="Binance Logo">
+    </div>
+
+    <div class="amount" id="amountText">-9611.26 USDT</div>
+    <div class="status" id="status">✅ Completed</div>
+    <div class="note" id="noteText">Crypto transferred successfully. Please check your wallet.</div>
+
+    <div class="info">
+      <div class="row">
+        <span>Network:</span>
+        <span id="networkText">TRX</span>
+      </div>
+      <div class="row">
+        <span>Wallet Address:</span>
+        <span id="addressText">TWS1onJnNTg8tJHomceqxBxTsUB1DHh7PV</span>
+      </div>
+      <div class="row">
+        <span>Transaction ID:</span>
+        <span id="txidText">f3da4a5d69bc51e32469f8134ad9a7436a0651ee1c99c91e964183a2e1a4dda9</span>
+      </div>
+      <div class="row">
+        <span>Amount Sent:</span>
+        <span id="realAmountText">9612.26 USDT</span>
+      </div>
+      <div class="row">
+        <span>Network Fee:</span>
+        <span id="feeText">1.00 USDT</span>
+      </div>
+      <div class="row">
+        <span>Wallet Type:</span>
+        <span id="walletTypeText">Spot Wallet</span>
+      </div>
+      <div class="row">
+        <span>Date:</span>
+        <span id="dateText">2024-02-14 06:24:00</span>
+      </div>
+    </div>
+
+    <div class="action-buttons">
+      <button onclick="alert('Report Scam')">Report Scam</button>
+      <button onclick="alert('Save Address')">Save Address</button>
+    </div>
+
+    <div class="form-section">
+      <h3>Update Receipt</h3>
+      <form id="receiptForm">
+        <input type="text" id="inputAmount" placeholder="Enter Amount (e.g., -500 USDT)" required>
+        <select id="inputStatus">
+          <option value="completed">Completed</option>
+          <option value="pending">Pending</option>
+          <option value="failed">Failed</option>
+          <option value="rejected">Rejected</option>
+        </select>
+        <input type="text" id="inputAddress" placeholder="Wallet Address" required>
+        <input type="text" id="inputTxid" placeholder="Transaction ID" required>
+        <input type="text" id="inputRealAmount" placeholder="Real Amount Sent" required>
+        <input type="text" id="inputFee" placeholder="Network Fee" required>
+        <input type="text" id="inputWalletType" placeholder="Wallet Type" required>
+        <input type="datetime-local" id="inputDate" required>
+        <textarea id="inputNote" placeholder="Write a note..." rows="3" required></textarea>
+        <button type="submit">Update Receipt</button>
+      </form>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
